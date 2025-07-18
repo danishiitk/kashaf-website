@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import { personalInfo } from '../constants/personalInfo';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -56,19 +58,19 @@ const Contact = () => {
           <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold text-blue-700 mb-6">Get in Touch</h3>
             <p className="text-lg text-gray-700 mb-4">
-              <span className="font-semibold">Email:</span> <a href="mailto:kashafsiddiqui12@gmail.com" className="text-blue-600 hover:underline">kashafsiddiqui12@gmail.com</a>
+              <span className="font-semibold">Email:</span> <a href={`mailto:${personalInfo.email}`} className="text-blue-600 hover:underline">{personalInfo.email}</a>
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              <span className="font-semibold">Phone:</span> <a href="tel:+18176000128" className="text-blue-600 hover:underline">+91 (817) 600-0128</a>
+              <span className="font-semibold">Phone:</span> <a href={`tel:${personalInfo.phone}`} className="text-blue-600 hover:underline">{personalInfo.phone}</a>
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              <span className="font-semibold">LinkedIn:</span> <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">linkedin.com/in/yourprofile</a>
+              <span className="font-semibold">LinkedIn:</span> <a href="https://www.linkedin.com/in/dr-kashaf-nasreen-siddiqui-755955209/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">dr-kashaf-nasreen-siddiqui-755955209/</a>
             </p>
             <p className="text-lg text-gray-700 mb-4">
               <span className="font-semibold">ResearchGate:</span> <a href="https://researchgate.net/profile/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">researchgate.net/profile/yourprofile</a>
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              <span className="font-semibold">Location:</span> [Flat-206, Brindavan colony, Tolichowki, Hyderabad, Telangana 500008]
+              <span className="font-semibold">Location:</span> {personalInfo.address}
             </p>
             <p className="text-lg text-gray-700 mb-4">
               <span className="font-semibold">Office Hours:</span> Available on call

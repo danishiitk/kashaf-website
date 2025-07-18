@@ -1,40 +1,13 @@
 import React from 'react';
 
-const ResearchPublications = () => {
-  const publications = [
-    {
-      title: 'Published Paper Title 1: [Academic Journal]',
-      authors: 'Siddiqui, K. N., et al.',
-      journal: '[Journal Name]',
-      year: 'YYYY',
-      link: '#',
-    },
-    {
-      title: 'Published Paper Title 2: [Academic Journal]',
-      authors: 'Siddiqui, K. N., et al.',
-      journal: '[Journal Name]',
-      year: 'YYYY',
-      link: '#',
-    },
-  ];
+import { personalInfo } from '../constants/personalInfo';
 
-  const conferences = [
-    {
-      title: 'Conference Presentation Title 1',
-      conference: '[Conference Name]',
-      year: 'YYYY',
-      location: '[City, Country]',
-    },
-    {
-      title: 'Conference Presentation Title 2',
-      conference: '[Conference Name]',
-      year: 'YYYY',
-      location: '[City, Country]',
-    },
-  ];
+const ResearchPublications = () => {
+  const publications = personalInfo.researchPapers;
+  const conferences = personalInfo.conferences;
 
   return (
-    <section id="research-publications" className="py-16 bg-gray-50 text-gray-800">
+    <section id="research" className="py-16 bg-gray-50 text-gray-800">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-blue-800 mb-12">Research & Publications</h2>
 
@@ -42,7 +15,7 @@ const ResearchPublications = () => {
         <div className="mb-12 p-6 bg-white rounded-lg shadow-lg">
           <h3 className="text-2xl font-semibold text-blue-700 mb-4">PhD Research Summary</h3>
           <p className="text-lg text-gray-700 leading-relaxed">
-            My doctoral research at <span className="font-semibold">[University]</span> focused on <span className="font-semibold">[Academic Area]</span>, exploring <span className="italic">[brief description of research problem/question]</span>. This involved <span className="italic">[mention key methodologies, e.g., extensive qualitative analysis, quantitative modeling, experimental design]</span>, leading to significant contributions in <span className="font-semibold">[specific field/sub-field]</span>. The findings provided novel insights into <span className="italic">[briefly state impact or key discovery]</span>.
+            My doctoral research at <span className="font-semibold">{personalInfo.university}</span> focused on <span className="font-semibold">Indian Literature</span>, exploring the ideals of Marxist approach in the poetic works of Faiz Ahmed Faiz and Kaifi Azmi. This involved extensive qualitative analysis, leading to significant contributions in the field of Indian Literature. The findings provided novel insights into the progressive poetic vision of these poets.
           </p>
         </div>
 
@@ -53,11 +26,7 @@ const ResearchPublications = () => {
             {publications.map((pub, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">{pub.title}</h4>
-                <p className="text-md text-gray-700 mb-1">{pub.authors}</p>
-                <p className="text-md text-gray-600 mb-3"><em>{pub.journal}</em>, {pub.year}</p>
-                <a href={pub.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
-                  View Publication &rarr;
-                </a>
+                <p className="text-md text-gray-700 mb-1">Authors: {pub.coAuthors}</p>
               </div>
             ))}
           </div>
@@ -70,8 +39,9 @@ const ResearchPublications = () => {
             {conferences.map((conf, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">{conf.title}</h4>
-                <p className="text-md text-gray-700 mb-1">{conf.conference}</p>
-                <p className="text-md text-gray-600">{conf.year}, {conf.location}</p>
+                <p className="text-md text-gray-700 mb-1">Event: {conf.event}</p>
+                <p className="text-md text-gray-600">Organizer: {conf.organizer}</p>
+                <p className="text-md text-gray-600">Date: {conf.date}</p>
               </div>
             ))}
           </div>

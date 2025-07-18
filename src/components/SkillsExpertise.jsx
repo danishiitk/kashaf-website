@@ -1,4 +1,5 @@
 import React from 'react';
+import { personalInfo } from '../constants/personalInfo';
 
 const SkillBar = ({ skill, percentage }) => (
   <div className="mb-4">
@@ -13,38 +14,10 @@ const SkillBar = ({ skill, percentage }) => (
 );
 
 const SkillsExpertise = () => {
-  const subjectSkills = [
-    { name: '[Subject Area 1]', level: 95 },
-    { name: '[Subject Area 2]', level: 90 },
-    { name: '[Subject Area 3]', level: 85 },
-  ];
-
-  const teachingTechSkills = [
-    { name: 'Learning Management Systems (LMS)', level: 90 },
-    { name: 'Online Collaboration Tools', level: 85 },
-    { name: 'Presentation Software', level: 95 },
-  ];
-
-  const researchMethodologySkills = [
-    { name: 'Qualitative Research', level: 90 },
-    { name: 'Quantitative Research', level: 85 },
-    { name: 'Data Analysis & Interpretation', level: 88 },
-  ];
-
-  const languageSkills = [
-    { name: 'English', level: 100 },
-    { name: 'Urdu', level: 90 },
-    { name: 'Arabic', level: 70 },
-  ];
-
-  const technicalSkills = [
-    { name: 'Microsoft Office Suite', level: 95 },
-    { name: 'Statistical Software (e.g., SPSS, R)', level: 80 },
-    { name: 'Academic Databases', level: 90 },
-  ];
+  const { subjectSkills, teachingTechSkills, researchMethodologySkills, languageSkills, technicalSkills } = personalInfo.skills;
 
   return (
-    <section id="skills-expertise" className="py-16 bg-white text-gray-800">
+    <section id="skills" className="py-16 bg-white text-gray-800">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-blue-800 mb-12">Skills & Expertise</h2>
 

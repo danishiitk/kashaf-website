@@ -1,36 +1,11 @@
 import React from 'react';
+import { personalInfo } from '../constants/personalInfo';
 
 const AwardsRecognition = () => {
-  const awards = [
-    {
-      name: 'Excellence in Teaching Award',
-      year: 'YYYY',
-      description: 'Recognized for outstanding pedagogical practices and student engagement.',
-    },
-    {
-      name: 'Research Excellence Grant',
-      year: 'YYYY',
-      description: 'Awarded for innovative research in [Academic Area].',
-    },
-    {
-      name: 'University Scholarship',
-      year: 'YYYY',
-      description: 'Merit-based scholarship for academic achievement during PhD studies.',
-    },
-  ];
-
-  const memberships = [
-    'Member, [Professional Organization 1]',
-    'Member, [Professional Organization 2]',
-  ];
-
-  const certifications = [
-    'Certified [Certification Name 1]',
-    'Certified [Certification Name 2]',
-  ];
+  const { awards, memberships, certifications } = personalInfo.awardsRecognition;
 
   return (
-    <section id="awards-recognition" className="py-16 bg-gray-50 text-gray-800">
+    <section id="awards" className="py-16 bg-gray-50 text-gray-800">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-blue-800 mb-12">Awards & Recognition</h2>
 

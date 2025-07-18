@@ -1,8 +1,9 @@
-import React from 'react';
-
+import { personalInfo } from '../constants/personalInfo';
+import { useNavigate } from 'react-router-dom';
 const Hero = () => {
+  const navigate = useNavigate();
   return (
-    <section className="relative h-screen bg-gradient-to-r from-blue-800 to-purple-900 text-white flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative h-screen bg-sky-900 text-white flex items-center justify-center overflow-hidden">
       {/* Subtle background animation/pattern */}
       <div className="absolute inset-0 z-0 opacity-10">
         {/* Placeholder for a subtle SVG pattern or animation */}
@@ -19,23 +20,23 @@ const Hero = () => {
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between z-10">
         {/* Left Section: Text Content */}
         <div className="text-center lg:text-left lg:w-1/2 mb-10 lg:mb-0">
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
-            Dr. Kashaf Nasreen Siddiqui
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+            Dr. {personalInfo.firstName} {personalInfo.lastName}
           </h1>
           <h2 className="text-3xl md:text-4xl font-semibold text-blue-200 mb-6 animate-fade-in-up animation-delay-200">
-            PhD Graduate | Aspiring Educator
+            {personalInfo.title}
           </h2>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-lg mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
             "Empowering minds through knowledge and fostering a passion for lifelong learning."
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up animation-delay-600">
-            <a href="/src/assets/cv.pdf" download="Kashaf_Nasreen_Siddiqui_CV.pdf">
+            <a href="/src/assets/cv.pdf" download={`${personalInfo.firstName}_${personalInfo.lastName}_CV.pdf`}>
               <button className="bg-white text-blue-800 hover:bg-blue-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
                 Download CV
               </button>
             </a>
             <button
-              onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => navigate('/contact')}
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-800 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
             >
               Contact Me

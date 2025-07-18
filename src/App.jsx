@@ -1,25 +1,15 @@
-import Hero from './components/Hero';
-import About from './components/About';
-import Education from './components/Education';
-import TeachingExperience from './components/TeachingExperience';
-import ResearchPublications from './components/ResearchPublications';
-import SkillsExpertise from './components/SkillsExpertise';
-import AwardsRecognition from './components/AwardsRecognition';
-import Contact from './components/Contact';
+import { Outlet } from 'react-router-dom';
+import Header from './components/Header';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Hero />
-      <About />
-      <Education />
-      <TeachingExperience />
-      <ResearchPublications />
-      <SkillsExpertise />
-      <AwardsRecognition />
-      <Contact />
-      <Footer />
+    <div className="min-h-screen bg-gray-100 flex flex-col">
+      <Header className="sticky top-0 z-50" />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+      <Footer className="mt-auto" />
     </div>
   );
 }
