@@ -13,23 +13,27 @@ import AwardsRecognition from "./components/AwardsRecognition";
 import Contact from "./components/Contact";
 import { personalInfo } from "./constants/personalInfo";
 
-const router = createBrowserRouter([
-  { basename: '/kashaf-website' },
-  {
-    path: "/kashaf-website",
-    element: <App />,
-    children: [
-      { index: true, element: <Hero /> },
-      { path: "about", element: <About /> },
-      { path: "education", element: <Education /> },
-      { path: "teaching-experience", element: <TeachingExperience /> },
-      { path: "research-publications", element: <ResearchPublications /> },
-      { path: "skills-expertise", element: <SkillsExpertise /> },
-      { path: "awards-recognition", element: <AwardsRecognition /> },
-      { path: "contact", element: <Contact /> },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        { index: true, element: <Hero /> },
+        { path: "about", element: <About /> },
+        { path: "education", element: <Education /> },
+        { path: "teaching-experience", element: <TeachingExperience /> },
+        { path: "research-publications", element: <ResearchPublications /> },
+        { path: "skills-expertise", element: <SkillsExpertise /> },
+        { path: "awards-recognition", element: <AwardsRecognition /> },
+        { path: "contact", element: <Contact /> },
+      ],
+    },
+  ],
+  { basename: '/kashaf-website' }
+);
+
+
 document.title = personalInfo.nameTitle + " " + personalInfo.firstName + " " + personalInfo.middleName + " " + personalInfo.lastName;
 const root = createRoot(document.getElementById("root"));
 root.render(

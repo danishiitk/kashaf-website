@@ -1,5 +1,6 @@
 import React from 'react';
 import { personalInfo } from '../constants/personalInfo';
+import photo from '../assets/photo.jpeg';
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row items-center lg:space-x-12">
           {/* Left Section: Professional Photo Placeholder */}
           <div className="lg:w-1/3 mb-8 lg:mb-0 flex justify-center">
-            <img src="/src/assets/photo.jpeg" alt="Professional Photo" className="w-48 h-48 sm:w-64 sm:h-64 rounded-full object-cover shadow-xl border-4 border-blue-200" />
+            <img src={photo} alt="Professional Photo" className="w-48 h-48 sm:w-64 sm:h-64 rounded-full object-cover shadow-xl border-4 border-blue-200" />
           </div>
 
           {/* Right Section: Content */}

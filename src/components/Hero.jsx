@@ -1,5 +1,6 @@
 import { personalInfo } from '../constants/personalInfo';
 import { useNavigate } from 'react-router-dom';
+import photo from '../assets/photo.jpeg';
 const Hero = () => {
   const navigate = useNavigate();
   return (
@@ -46,7 +47,7 @@ const Hero = () => {
 
         {/* Right Section: Headshot Placeholder */}
         <div className="mb-0 lg:w-1/2 flex justify-center lg:justify-center animate-fade-in-right animation-delay-800">
-          <img src="/src/assets/photo.jpeg" alt="Professional Headshot" className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-2xl border-4 border-blue-300" />
+          <img src={photo} alt="Professional Headshot" className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-2xl border-4 border-blue-300" />
         </div>
       </div>
     </section>
