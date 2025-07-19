@@ -71,16 +71,16 @@ const Contact = () => {
               <span className="font-semibold">Phone:</span> <a href={`tel:${personalInfo.phone}`} className="text-blue-600 hover:underline">{personalInfo.phone}</a>
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              <span className="font-semibold">LinkedIn:</span> <a href="https://www.linkedin.com/in/dr-kashaf-nasreen-siddiqui-755955209/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">dr-kashaf-nasreen-siddiqui-755955209/</a>
+              <span className="font-semibold">LinkedIn:</span> <a href={personalInfo.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{personalInfo.linkedinUrl.split('/').slice(-2, -1)[0] || personalInfo.linkedinUrl}</a>
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              <span className="font-semibold">ResearchGate:</span> <a href="https://researchgate.net/profile/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">researchgate.net/profile/yourprofile</a>
+              <span className="font-semibold">ResearchGate:</span> <a href={personalInfo.researchGateUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research Gate</a>
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              <span className="font-semibold">Location:</span> {personalInfo.address}
+              <span className="font-semibold">Location:</span> <a href={`https://www.google.com/maps/search/?api=1&query=${personalInfo.latitude},${personalInfo.longitude}`} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{personalInfo.address}</a>
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              <span className="font-semibold">Office Hours:</span> Available on call
+              <span className="font-semibold">Office Hours:</span> {personalInfo.officeHours}
             </p>
           </div>
 

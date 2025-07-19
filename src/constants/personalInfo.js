@@ -13,8 +13,14 @@ export const personalInfo = {
   country: "India",
   address:
     "Flat-206, Brindavan colony, Tolichowki, Hyderabad, Telangana, 500008",
+  latitude: 17.4072403,
+  longitude: 78.4089176,
   email: "kashafsiddiqui12@gmail.com",
   phone: "+91 8176000128",
+  linkedinUrl:
+    "https://www.linkedin.com/in/dr-kashaf-nasreen-siddiqui-755955209/",
+  researchGateUrl: "https://www.researchgate.net/profile/Kashaf-Siddiqui",
+  officeHours: "Available on call",
   about: {
     aboutMe:
       "As a PhD holder in English from Integral University, I bring a rigorous academic background and a passion for education to the forefront. My doctoral research focused on Indian literature, equipping me with advanced analytical and critical thinking skills.",
@@ -42,11 +48,6 @@ export const personalInfo = {
       year: "2014-2017",
     },
   ],
-  emailJsData: {
-    serviceId: "YOUR_SERVICE_ID",
-    templateId: "YOUR_TEMPLATE_ID",
-    publicKey: "YOUR_PUBLIC_KEY",
-  },
   researchPapers: [
     {
       title:

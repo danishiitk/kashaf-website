@@ -19,7 +19,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-center z-10 h-full">
         {/* Left Section: Text Content */}
-        <div className="text-center lg:w-1/2 mb-8 lg:mb-0">
+        <div className="flex flex-col items-center text-center lg:w-1/2 mb-8 lg:mb-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-3 animate-fade-in-up">
             {personalInfo.nameTitle} {personalInfo.firstName} {personalInfo.middleName} {personalInfo.lastName}
           </h1>
