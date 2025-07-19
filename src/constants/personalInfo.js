@@ -1,7 +1,11 @@
 export const personalInfo = {
-  firstName: "Kashaf Nasreen",
+  nameTitle: "Dr.",
+  firstName: "Kashaf",
+  middleName: "Nasreen",
   lastName: "Siddiqui",
   title: "Research Scholar, PhD",
+  introduction:
+    "Empowering minds through knowledge and fostering a passion for lifelong learning.",
   university: "Integral University",
   department:
     "Department of Languages, Faculty of Humanities and Social Sciences",
@@ -119,8 +123,17 @@ export const personalInfo = {
   },
   awardsRecognition: {
     awards: [
-      { name: "Best Research Paper Award", year: "2023", description: "Awarded for outstanding research in Indian Literature." },
-      { name: "Academic Excellence Scholarship", year: "2018", description: "Recognized for exceptional academic performance during MA studies." },
+      {
+        name: "Best Research Paper Award",
+        year: "2023",
+        description: "Awarded for outstanding research in Indian Literature.",
+      },
+      {
+        name: "Academic Excellence Scholarship",
+        year: "2018",
+        description:
+          "Recognized for exceptional academic performance during MA studies.",
+      },
     ],
     memberships: [
       "Modern Language Association (MLA)",
