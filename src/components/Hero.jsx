@@ -1,6 +1,7 @@
 import { personalInfo } from '../constants/personalInfo';
 import { useNavigate } from 'react-router-dom';
 import photo from '../assets/photo.jpeg';
+import cv from '../assets/cv.pdf';
 const Hero = () => {
   const navigate = useNavigate();
   return (
@@ -31,7 +32,7 @@ const Hero = () => {
             {personalInfo.introduction}
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-3 animate-fade-in-up animation-delay-600">
-            <a href="/src/assets/cv.pdf" download={`${personalInfo.firstName}_${personalInfo.lastName}_CV.pdf`}>
+            <a href={cv} download={`${personalInfo.firstName}_${personalInfo.lastName}_CV.pdf`}>
               <button className="bg-white text-blue-800 hover:bg-blue-100 px-6 py-2 rounded-full text-base font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105 w-full sm:w-auto">
                 Download CV
               </button>
