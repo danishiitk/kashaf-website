@@ -14,8 +14,9 @@ import Contact from "./components/Contact";
 import { personalInfo } from "./constants/personalInfo";
 
 const router = createBrowserRouter([
+  { basename: '/kashaf-website' },
   {
-    path: "/",
+    path: "/kashaf-website",
     element: <App />,
     children: [
       { index: true, element: <Hero /> },
