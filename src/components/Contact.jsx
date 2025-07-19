@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { personalInfo } from '../constants/personalInfo';
+import { emailJsData } from './api/emailJs';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -35,14 +37,19 @@ const Contact = () => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
-      // Here you would typically send the form data to a backend service
-      console.log('Form submitted:', formData);
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
-      });
+      emailjs.sendForm(emailJsData.serviceId, emailJsData.templateId, e.target, emailJsData.publicKey)
+        .then((result) => {
+          console.log(result.text);
+          setIsSubmitted(true);
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+          });
+        }, (error) => {
+          console.log(error.text);
+          alert('Failed to send message. Please try again later.');
+        });
     } else {
       setErrors(validationErrors);
     }

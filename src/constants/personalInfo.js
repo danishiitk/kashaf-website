@@ -15,6 +15,16 @@ export const personalInfo = {
     "Flat-206, Brindavan colony, Tolichowki, Hyderabad, Telangana, 500008",
   email: "kashafsiddiqui12@gmail.com",
   phone: "+91 8176000128",
+  about: {
+    aboutMe:
+      "As a PhD holder in English from Integral University, I bring a rigorous academic background and a passion for education to the forefront. My doctoral research focused on Indian literature, equipping me with advanced analytical and critical thinking skills.",
+    teachingPhilosophy:
+      "My teaching philosophy centers on fostering an interactive and inclusive learning environment. I believe in empowering students to become independent thinkers and problem-solvers. I utilize a blend of theoretical knowledge and practical application, encouraging active participation and critical discourse in the classroom.",
+    academicJourney:
+      "My academic journey has been driven by a deep curiosity and commitment to scholarly excellence. Beyond my core research, I am keenly interested in reading novels and public speaking, which enrich my perspective and inform my teaching.",
+    professionalDevelopment:
+      "I am dedicated to continuous professional development and staying abreast of the latest pedagogical advancements to ensure my students receive the most current and effective education.",
+  },
   education: [
     {
       degree: "PhD in English Literature",
@@ -32,6 +42,11 @@ export const personalInfo = {
       year: "2014-2017",
     },
   ],
+  emailJsData: {
+    serviceId: "YOUR_SERVICE_ID",
+    templateId: "YOUR_TEMPLATE_ID",
+    publicKey: "YOUR_PUBLIC_KEY",
+  },
   researchPapers: [
     {
       title:

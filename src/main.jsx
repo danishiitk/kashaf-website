@@ -11,6 +11,7 @@ import ResearchPublications from "./components/ResearchPublications";
 import SkillsExpertise from "./components/SkillsExpertise";
 import AwardsRecognition from "./components/AwardsRecognition";
 import Contact from "./components/Contact";
+import { personalInfo } from "./constants/personalInfo";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
+document.title = personalInfo.nameTitle + " " + personalInfo.firstName + " " + personalInfo.middleName + " " + personalInfo.lastName;
 const root = createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
